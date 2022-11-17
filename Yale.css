@@ -77,18 +77,22 @@ form {
     }
 }
 
+
+
 *, *:before, *:after {
 -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
+
 body {
- overflow: hidden;
- font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+ /*overflow: hidden;*/
+ font-family: sans-serif;
  font-weight: 100;
  color: rgba(255, 255, 255, 1);
  margin: 0;
  padding: 0;
  background: #4A4A4A;
+
  -webkit-touch-callout: none;
  -webkit-user-select: none;
  -khtml-user-select: none;
@@ -148,7 +152,7 @@ body {
 }
 
 .month {
-  /*overflow: hidden;*/
+  overflow: hidden;
   opacity: 0;
 }
 
@@ -372,6 +376,8 @@ body {
 .entry.yellow:after { background: rgba(249, 233, 0, 1); }
 
 /* Animations are cool!  */
+
+
 @-webkit-keyframes moveFromTopFade {
   from { opacity: .3; height:0px; margin-top:0px; -webkit-transform: translateY(-100%); }
 }
@@ -460,4 +466,52 @@ body {
 }
 @keyframes fadeOutShink  {
   to { opacity: 0; padding: 0px; height: 0px; }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: navy;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
